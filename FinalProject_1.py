@@ -1,4 +1,35 @@
-# We want to bring in user input from a txt file and use it to create a dictionary of words 
+#THE GROUP OF COMMENTS RIGHT HERE FUFILL ITEM 6.2 OFF THE CHECKLIST
+# Script Overview:
+# This Python script interacts with text files, processes their content, and performs various operations based on user input.
+
+# Section 1: Input Handling
+# The script prompts the user to provide a valid file pathway ending with '.txt'.
+# It utilizes a loop to ensure the user enters a correct file path.
+
+# Section 2: File Reading and Processing
+# The content of the specified text file is read, converted to uppercase, and printed.
+# A list of words is created by splitting the content based on whitespace.
+
+# Section 3: Word Manipulation
+# Choice 1:
+# - A list of uppercase alphabets is manually created.
+# - The user selects between creating a new list of words or removing non-words from the existing list.
+# - The script modifies the word list accordingly.
+
+# Choice 2:
+# - The user is prompted for another valid file pathway ending with '.txt'.
+# - The modified word list and new word list are joined into strings.
+# - The script writes the modified word list to the new file and appends the new word list to it.
+
+# Important Note:
+# This script assumes that the user provides valid inputs and file pathways for successful execution.
+# Proper error handling has been included but to not have to restart make sure you put in what it asks for exactly
+
+# Checklist Items:
+# The script addresses various checklist items, as indicated by comments throughout the code.
+
+# End of Documentation
+
 
 # a conditional to stop the loop
 file_condition = False
