@@ -31,7 +31,7 @@
 # End of Documentation
 
 #I HAVE SPECIFIED WHERE THROUGH OUT THIS WHOLE PROJECT BUT JUST WANT TO MENTION THAT THIS WHOLE ASSIGNMENT COVERS ITEMS..
-# 3.19, 3.20, 3.21, 3.11, 4.2, 4.9, 5.11, 5.9, 5.10, 5.12, 5.13, 5.14, 6.1 ,6.2 6.5, 6.7, 7.1, 9.1 , 9.2, 9.3, 9.5
+# 3.19, 3.20, 3.21, 3.11, 4.2, 4.9, 5.11, 5.9, 5.7, 5.10, 5.12, 5.13, 5.14, 6.1 ,6.2 6.5, 6.7, 7.1, 9.1 , 9.2, 9.3, 9.5
 #YOU CAN COMMAND F, THEN TYPE THE ITEM TO SEE WHERE IT IS AND HOW IT IS BEING USED
 #SOME OF THE ITEMS ARE ON THE LICENSE, README.MD, or cannot be seen so command f would not work in that scenario
 
@@ -60,8 +60,8 @@ while file_condition == False:
         file_condition = False
 
 #Now we want to read through that file and store it on a variable 
+#THIS CODE COMPLETES ITEM 3.19 OFF MY CHECKLIST BECAUSEE WE ARE READING IN USER INPUT FROM A FILE TO USE IN OUR PROGRAM
 with open(file_path, 'r') as user_input:
-
     #reading through the txt file and putting it in a variable 
     file_contents = user_input.read()
     uppercase_file_contents = file_contents.upper()
