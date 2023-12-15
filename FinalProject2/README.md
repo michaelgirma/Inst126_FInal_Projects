@@ -51,3 +51,7 @@
 # License
 
 1. This project is licensed under the MIT License.
+2. Copyright (c) 2005-2023, NumPy Developers.
+3. Copyright (c) 2008-2011, AQR Capital Management, LLC, Lambda Foundry, Inc. and PyData Development Team
+    All rights reserved.
+    Copyright (c) 2011-2023, Open source contributors.

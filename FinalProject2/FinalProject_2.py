@@ -1,10 +1,13 @@
+#BELOW I AM USING ITEM, 6.8: Making appropriate use of another person’s license when incorporating their software. I also put the licenses on the readme file in the root directory
+# Link to pandas license https://pandas.pydata.org/pandas-docs/stable/getting_started/overview.html
+# Link to numpy license https://numpy.org/doc/stable/license.html
 import pandas as pd
 import numpy as np
 
-# 5.15: Creating a dictionary manually
+#BELOW I AM USING ITEM, 5.15: Creating a dictionary manually
 my_dict = {'Species': [], 'obs': [], 'flower_part': [], 'Length': [], 'Width': []}
 
-# 8_2: Reading CSV data into a DataFrame using pandas
+# BELOW I AM USING ITEM, 8.2: Reading CSV data into a DataFrame using pandas
 while True: 
     csv_file_path = input('Please enter a valid pathway to a valid csv file: ')
 
@@ -21,11 +24,11 @@ while True:
     else:
         print("Please provide a valid csv file: ")
 
-# 5.17: Accessing the keys of a dictionary
+#BELOW I AM USING ITEM, 5.17: Accessing the keys of a dictionary
 keys = my_dict.keys()
 print(keys)
 
-# 5.19: Updating values in a dictionary programmatically
+#BELOW I AM USING ITEM, 5.19: Updating values in a dictionary programmatically
 for index, row in df.iterrows():
     my_dict['Species'].append(row['Species'])
     my_dict['obs'].append(row['obs'])
@@ -33,20 +36,26 @@ for index, row in df.iterrows():
     my_dict['Length'].append(row['Length'])
     my_dict['Width'].append(row['Width'])
 
-# 5.18: Iterating through the items of a dictionary to access both keys and values
+# BELOW I AM USING ITEM, 5.18: Iterating through the items of a dictionary to access both keys and values
 for key, value in my_dict.items():
     print(f"HERE ARE YOUR KEY VALUE PAIRS --> Key: {key}, Value: {value}")
 
-user_question = input("Type yes to see the length values square, type no to move on: ")
-if user_question == 'yes':
-    # 8.1: Using NumPy for vectorized computation
-    df['new_lengths'] = np.square(df['Length'])
-    print("Heres a list of values below that has the squared values of the original lengths: {}".format(df['new_lengths']))
-else:
-    print("We will move on :(")
+while True:
+    user_question = input("Type yes to see the length values square, type no to move on: ")
+
+    if user_question == 'yes':
+        # BELOW I AM USING ITEM, 8.1: Using NumPy for vectorized computation
+        df['new_lengths'] = np.square(df['Length'])
+        print("Heres a list of values below that has the squared values of the original lengths: {}".format(df['new_lengths']))
+        break
+    elif user_question == 'no':
+        print("We will move on :(")
+        break
+    else:
+        print('Please type yes or no specifically.')
 
 
-# 8.3: Using pandas to get a subset of a DataFrame using a boolean and 8.4: Writing data to CSV using pandas
+# BELOW I AM USING ITEM, 8.3: Using pandas to get a subset of a DataFrame using a boolean AND 8.4: Writing data to CSV using pandas
 subset_df = df[df['flower_part'] == 'Sepal']
 print(f"Here is a subset dataframe that shows you all the flower parts that were specifcally sepals {subset_df}.")
 
@@ -61,15 +70,16 @@ while True:
 
     if output_csv_path.endswith('.csv'):
         subset_df.to_csv(output_csv_path, index=False)
-        # 7.2: Using a backslash to escape a special character
+        # BELOW I AM USING, 7.2:Using a backslash to escape a special character
         print("Congradulations, checkout your new dataframe's on the csv file you provided which will also contain those squared length values. : \\)")
         break
     else:
-        # 7.3: Using a raw string to avoid needing to use backslashes
+        # BELOW I AM USING ITEM,  7.3: Using a raw string to avoid needing to use backslashes
         print(r"Please provide a valid csv file: \\")
 
 
-# 7.4: Using a regular expression to check if a string matches a pattern
+# BELOW I AM USING ITEM,  7.4: Using a regular expression to check if a string matches a pattern
+#This library below allows user to work with regular expressions
 import re
 
 while True:
@@ -81,7 +91,7 @@ while True:
     else:
         print("Please provide a valid social security.")
 
-# 7.5: Using regular expressions with groupings to extract or change parts of a string
+# BELOW I AM USING ITEM,  7.5: Using regular expressions with groupings to extract or change parts of a string
 while True:
     new_social_security = input("If you want to input a new social security type a new one if not just type no: ")
 
@@ -102,6 +112,5 @@ while True:
         else:
             print("Please provide a valid social sceurity number in this exact format: 123-45-4567")
 
-# 6.8: Making appropriate use of another person’s license when incorporating their software
-# (Note: Ensure you comply with the license terms of any third-party software you use)
+
 
